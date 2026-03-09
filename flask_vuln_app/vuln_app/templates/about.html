@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>About This Portal</h2>
+  <p>The ACME Corp Intranet Portal is maintained by the Internal IT Operations team. It provides lightweight utilities for network troubleshooting and will be expanded with additional employee services throughout 2026.</p>
+  <p style="margin-top:.8rem">For issues or feature requests, contact <strong>it-ops@acme-corp.local</strong>.</p>
+  <!-- FIXME: migrate legacy diagnostic API at /api/v1/internal/healthcheck to new monitoring stack -->
+</div>
+<div class="card">
+  <h2>System Info</h2>
+  <ul class="features">
+    <li>Platform: Ubuntu Server</li>
+    <li>Application: Flask / Python 3</li>
+    <li>Version: 1.0.3</li>
+  </ul>
+</div>
+{% endblock %}

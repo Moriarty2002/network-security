@@ -1,0 +1,3 @@
+ssh -i aws_redirector_key_pair.pem ubuntu@ns-alpine-sys-update.duckdns.org
+
+15.160.251.55

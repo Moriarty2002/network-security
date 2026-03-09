@@ -1,0 +1,3 @@
+ssh -i aws_web_app_key_pair.pem ubuntu@ns-web-app.duckdns.org
+
+51.118.56.148

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Welcome to the ACME Corp Internal Portal</h2>
+  <p>This portal provides employees with quick access to internal IT services and resources. Please use the navigation above to find what you need.</p>
+</div>
+<div class="card">
+  <h2>Available Services</h2>
+  <ul class="features">
+    <li>Employee Directory <span class="badge">coming soon</span></li>
+    <li>IT Ticket System <span class="badge">coming soon</span></li>
+  </ul>
+</div>
+<div class="card">
+  <h2>Notices</h2>
+  <p><strong>2026-02-20</strong> – Scheduled maintenance window this Saturday 02:00–06:00 UTC. Expect brief connectivity disruptions.</p>
+  <p style="margin-top:.6rem"><strong>2026-02-15</strong> – New VPN client v4.2 available for download on the IT portal.</p>
+</div>
+{% endblock %}
